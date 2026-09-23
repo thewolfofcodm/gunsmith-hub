@@ -622,7 +622,7 @@ const WEAPON_OVERRIDES = {
   },
 };
 
-const getAllWeapons = (cls, customDb) => {
+const getAllWeapons = (cls: any, customDb: any) => {
   const base = WEAPONS_DB[cls] || [];
   const custom = customDb?.weapons?.[cls] || [];
   const hidden = customDb?.hidden?.weapons || [];
@@ -631,7 +631,7 @@ const getAllWeapons = (cls, customDb) => {
     .sort();
 };
 
-const getAllClasses = (customDb) => {
+const getAllClasses = (customDb: any) => {
   const baseClasses = Object.keys(WEAPONS_DB);
   const customClasses = customDb?.weapons ? Object.keys(customDb.weapons) : [];
   const hidden = customDb?.hidden?.classes || [];
